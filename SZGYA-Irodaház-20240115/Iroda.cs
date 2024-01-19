@@ -8,12 +8,14 @@ namespace SZGYA_Irodahaz_20240115
 {
     internal class Iroda
     {
+        public int Sorszam { get; set; }
         public string Kod { get; set; }
         public int Kezdet { get; set; }
-        List<int> LetszamAdat { get; set; }
+        public List<int> LetszamAdat { get; set; }
 
-        public Iroda(string sor) 
+        public Iroda(int sorszam, string sor) 
         {
+            this.Sorszam = sorszam;
             this.LetszamAdat = new List<int>(); 
             string[] adatok = sor.Split(' ');
             this.Kod = adatok[0];
